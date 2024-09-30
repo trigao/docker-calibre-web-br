@@ -32,7 +32,7 @@ RUN \
     xdg-utils && \
   echo "**** install calibre-web ****" && \
   if [ -z ${CALIBREWEB_RELEASE+x} ]; then \
-    CALIBREWEB_RELEASE=$(curl -sX GET "https://api.github.com/repos/janeczku/calibre-web/releases/latest" \
+    CALIBREWEB_RELEASE=$(curl -sX GET "https://github.com/trigao/calibre-web-br" \
     | awk '/tag_name/{print $4;exit}' FS='[""]'); \
   fi && \
   curl -o \
